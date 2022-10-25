@@ -23,10 +23,6 @@ func mayhemit(bytes []byte) int {
             config.LoadConfig(content)
             return 0
 
-        case 2:
-            var test wrapper.Wrapper
-            test.Write(bytes)
-
         default:
             crypto.NewCipher(bytes)
             return 0
