@@ -3,7 +3,6 @@ package fuzz
 import "strconv"
 import "github.com/awnumar/rosen/config"
 import "github.com/awnumar/rosen/crypto"
-import "github.com/awnumar/rosen/tunnel/wrapper"
 
 func mayhemit(bytes []byte) int {
 
