@@ -3,7 +3,7 @@ package fuzz
 import "strconv"
 import "github.com/awnumar/rosen/config"
 import "github.com/awnumar/rosen/crypto"
-
+import "github.com/awnumar/rosen/tunnel/wrapper"
 
 func mayhemit(bytes []byte) int {
 
@@ -24,14 +24,8 @@ func mayhemit(bytes []byte) int {
             return 0
 
         case 2:
-            var test crypto.Cipher
-            test.Encrypt(bytes)
-            return 0
-
-        case 3:
-            var test crypto.Cipher
-            test.Decrypt(bytes)
-            return 0
+            var test wrapper.Wrapper
+            test.Write(bytes)
 
         default:
             crypto.NewCipher(bytes)
