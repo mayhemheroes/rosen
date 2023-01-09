@@ -1,4 +1,4 @@
-package fuzz
+package fuzzRosen
 
 import "strconv"
 import "github.com/awnumar/rosen/config"
